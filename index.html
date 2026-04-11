@@ -241,17 +241,22 @@ body{
     display:flex;align-items:center;justify-content:space-between;
     gap:12px;
 }
-.totals-section{text-align:center;flex:1}
+.totals-section{flex:1;display:flex;align-items:center;justify-content:center;gap:8px}
+.totals-section.selected-section{flex-direction:column;gap:2px}
+.totals-icon{width:36px;height:36px;border-radius:6px;flex-shrink:0}
+.totals-info{display:flex;flex-direction:column}
 .totals-label{
-    font-size:10px;color:#6a7a8e;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;
-    display:flex;align-items:center;justify-content:center;gap:4px;
+    font-size:9px;color:#8a9bb0;text-transform:uppercase;letter-spacing:0.5px;
+    line-height:1;
 }
-.totals-label img{width:22px;height:22px;border-radius:4px}
-.totals-val{font-size:20px;font-weight:800}
+.totals-val{font-size:18px;font-weight:800;line-height:1.2}
 .totals-val.gold{color:#ffd780}
 .totals-val.purp{color:#c898ff}
 .totals-val.grn{color:#5adf6a}
-.totals-divider{width:1px;height:36px;background:rgba(60,100,160,0.3)}
+.totals-val.orange{color:#e8934a}
+.totals-divider{width:1px;height:40px;background:rgba(60,100,160,0.3)}
+.selected-label{font-size:10px;color:#6a7a8e;text-transform:uppercase;letter-spacing:1px}
+.selected-val{font-size:18px;font-weight:800}
 
 /* Checked count badge on tabs */
 .tab-badge{
@@ -296,24 +301,33 @@ body{
 </div>
 <div class="totals-bar">
     <div class="totals-inner">
-        <div class="totals-section">
-            <div class="totals-label">Selected</div>
-            <div class="totals-val grn" id="totalChecked">0 / 29</div>
+        <div class="totals-section selected-section">
+            <div class="selected-label">Selected</div>
+            <div class="selected-val grn" id="totalChecked">0 / 29</div>
         </div>
         <div class="totals-divider"></div>
         <div class="totals-section">
-            <div class="totals-label"><img src="coin_img.png" alt="">Coin</div>
-            <div class="totals-val gold" id="totalCoin">0</div>
+            <img class="totals-icon" src="coin_img.png" alt="">
+            <div class="totals-info">
+                <div class="totals-label">Coin</div>
+                <div class="totals-val gold" id="totalCoin">0</div>
+            </div>
         </div>
         <div class="totals-divider"></div>
         <div class="totals-section">
-            <div class="totals-label"><img src="crown_img.png" alt="">Crown</div>
-            <div class="totals-val purp" id="totalCrown">0</div>
+            <img class="totals-icon" src="crown_img.png" alt="">
+            <div class="totals-info">
+                <div class="totals-label">Crown Fragment</div>
+                <div class="totals-val purp" id="totalCrown">0</div>
+            </div>
         </div>
         <div class="totals-divider"></div>
         <div class="totals-section">
-            <div class="totals-label"><img src="weapon_img.png" alt="">Weapon</div>
-            <div class="totals-val" style="color:#e8734a" id="totalWeapon">0</div>
+            <img class="totals-icon" src="weapon_img.png" alt="">
+            <div class="totals-info">
+                <div class="totals-label">Weapon Fragment</div>
+                <div class="totals-val orange" id="totalWeapon">0</div>
+            </div>
         </div>
     </div>
 </div>

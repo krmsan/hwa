@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -259,17 +259,17 @@ body{
 <div class="totals-bar">
     <div class="totals-inner">
         <div class="totals-section">
-            <div class="totals-label">Secilen</div>
+            <div class="totals-label">Selected</div>
             <div class="totals-val grn" id="totalChecked">0 / 29</div>
         </div>
         <div class="totals-divider"></div>
         <div class="totals-section">
-            <div class="totals-label">Toplam Odul</div>
+            <div class="totals-label">Total Reward</div>
             <div class="totals-val gold" id="totalR1">0</div>
         </div>
         <div class="totals-divider"></div>
         <div class="totals-section">
-            <div class="totals-label">Toplam Bonus</div>
+            <div class="totals-label">Total Bonus</div>
             <div class="totals-val purp" id="totalR2">0</div>
         </div>
     </div>
@@ -327,7 +327,7 @@ function render() {
         info.className = 'quest-info';
         info.innerHTML = `
             <div class="quest-text">${tier.text}</div>
-            <div class="quest-progress">Completed: ${tier.prog.toLocaleString('tr-TR')}/${tier.target.toLocaleString('tr-TR')}</div>
+            <div class="quest-progress">Completed: ${tier.prog.toLocaleString('en-US')}/${tier.target.toLocaleString('en-US')}</div>
         `;
 
         // Rewards
@@ -335,7 +335,7 @@ function render() {
         rewards.className = 'quest-rewards';
         const r1Icon = document.createElement('div');
         r1Icon.className = 'reward-icon type-a';
-        r1Icon.innerHTML = `<span class="reward-inner">\u2B2A</span><span class="reward-amt">${tier.r1.toLocaleString('tr-TR')}</span>`;
+        r1Icon.innerHTML = `<span class="reward-inner">\u2B2A</span><span class="reward-amt">${tier.r1.toLocaleString('en-US')}</span>`;
         rewards.appendChild(r1Icon);
 
         if (tier.r2 > 0) {
@@ -372,8 +372,8 @@ function render() {
     const tabTotal = document.createElement('div');
     tabTotal.className = 'tab-total';
     tabTotal.innerHTML = `
-        <span class="tab-total-label">Sekme Toplami:</span>
-        <span class="tab-total-val">${tabR1.toLocaleString('tr-TR')}</span>
+        <span class="tab-total-label">Tab Total:</span>
+        <span class="tab-total-val">${tabR1.toLocaleString('en-US')}</span>
         ${tabR2 > 0 ? `<span class="tab-total-val secondary">+${tabR2}</span>` : ''}
     `;
     panelsEl.appendChild(tabTotal);
@@ -391,8 +391,8 @@ function render() {
         });
     });
     document.getElementById('totalChecked').textContent = `${checkedAll} / ${totalAll}`;
-    document.getElementById('totalR1').textContent = grandR1.toLocaleString('tr-TR');
-    document.getElementById('totalR2').textContent = grandR2 > 0 ? grandR2.toLocaleString('tr-TR') : '0';
+    document.getElementById('totalR1').textContent = grandR1.toLocaleString('en-US');
+    document.getElementById('totalR2').textContent = grandR2 > 0 ? grandR2.toLocaleString('en-US') : '0';
 }
 
 render();

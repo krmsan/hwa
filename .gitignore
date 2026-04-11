@@ -1,7 +1,10 @@
 .DS_Store
 *.PNG
-*.png
 *.jpg
 *.jpeg
+IMG_*.png
+!coin_img.png
+!crown_img.png
+!weapon_img.png
 node_modules/
 .vercel/

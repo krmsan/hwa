@@ -1,12 +1,18 @@
 {
+  "eventName": "Titan Power",
+  "eventDate": "2026-04-11",
   "events": [
     {
       "id": "day_after_day",
       "name": "Day After Day",
       "subtitle": "You can complete these quests during a special event",
       "daily": false,
+      "r1_name": "Coin",
+      "r2_name": "Crown Fragment",
       "tiers": [
-        { "text": "Log in 3 times during a special event", "progress": 2, "target": 3, "r1": 600, "r2": 60 }
+        { "text": "Log in 1 time during a special event", "progress": 0, "target": 1, "r1": 400, "r2": 20 },
+        { "text": "Log in 2 times during a special event", "progress": 0, "target": 2, "r1": 500, "r2": 40 },
+        { "text": "Log in 3 times during a special event", "progress": 0, "target": 3, "r1": 600, "r2": 60 }
       ]
     },
     {
@@ -14,23 +20,82 @@
       "name": "Value Exchange",
       "subtitle": "You can complete these quests during a special event",
       "daily": false,
+      "r1_name": "Coin",
       "tiers": [
-        { "text": "Spend 4,000 Emeralds", "progress": 3965, "target": 4000, "r1": 300, "r2": 0 },
-        { "text": "Spend 7,000 Emeralds", "progress": 3965, "target": 7000, "r1": 350, "r2": 0 },
-        { "text": "Spend 10,000 Emeralds", "progress": 3965, "target": 10000, "r1": 450, "r2": 0 },
-        { "text": "Spend 15,000 Emeralds", "progress": 3965, "target": 15000, "r1": 600, "r2": 0 }
+        { "text": "Spend 2,000 Emeralds", "progress": 0, "target": 2000, "r1": 250, "r2": 0 },
+        { "text": "Spend 4,000 Emeralds", "progress": 0, "target": 4000, "r1": 300, "r2": 0 },
+        { "text": "Spend 7,000 Emeralds", "progress": 0, "target": 7000, "r1": 350, "r2": 0 },
+        { "text": "Spend 10,000 Emeralds", "progress": 0, "target": 10000, "r1": 450, "r2": 0 },
+        { "text": "Spend 15,000 Emeralds", "progress": 0, "target": 15000, "r1": 550, "r2": 0 },
+        { "text": "Spend 20,000 Emeralds", "progress": 0, "target": 20000, "r1": 650, "r2": 0 },
+        { "text": "Spend 25,000 Emeralds", "progress": 0, "target": 25000, "r1": 800, "r2": 0 },
+        { "text": "Spend 31,000 Emeralds", "progress": 0, "target": 31000, "r1": 1000, "r2": 0 },
+        { "text": "Spend 38,000 Emeralds", "progress": 0, "target": 38000, "r1": 1250, "r2": 0 },
+        { "text": "Spend 46,000 Emeralds", "progress": 0, "target": 46000, "r1": 1500, "r2": 0 },
+        { "text": "Spend 55,000 Emeralds", "progress": 0, "target": 55000, "r1": 2000, "r2": 0 },
+        { "text": "Spend 65,000 Emeralds", "progress": 0, "target": 65000, "r1": 2500, "r2": 0 },
+        { "text": "Spend 75,000 Emeralds", "progress": 0, "target": 75000, "r1": 3000, "r2": 0 },
+        { "text": "Spend 90,000 Emeralds", "progress": 0, "target": 90000, "r1": 4500, "r2": 0 },
+        { "text": "Spend 105,000 Emeralds", "progress": 0, "target": 105000, "r1": 7000, "r2": 0 },
+        { "text": "Spend 120,000 Emeralds", "progress": 0, "target": 120000, "r1": 8500, "r2": 0 },
+        { "text": "Spend 140,000 Emeralds", "progress": 0, "target": 140000, "r1": 10000, "r2": 0 },
+        { "text": "Spend 160,000 Emeralds", "progress": 0, "target": 160000, "r1": 11500, "r2": 0 },
+        { "text": "Spend 180,000 Emeralds", "progress": 0, "target": 180000, "r1": 13000, "r2": 0 },
+        { "text": "Spend 200,000 Emeralds", "progress": 0, "target": 200000, "r1": 15000, "r2": 0 }
       ]
     },
     {
-      "id": "generous_soul",
+      "id": "generous_soul_d1",
       "name": "Generous Soul",
+      "day": 1,
       "subtitle": "Complete it every day before the end of the event",
       "daily": true,
+      "r1_name": "Coin",
       "tiers": [
         { "text": "Score 100 VIP Points", "progress": 0, "target": 100, "r1": 200, "r2": 0 },
         { "text": "Score 200 VIP Points", "progress": 0, "target": 200, "r1": 300, "r2": 0 },
         { "text": "Score 400 VIP Points", "progress": 0, "target": 400, "r1": 500, "r2": 0 },
-        { "text": "Score 800 VIP Points", "progress": 0, "target": 800, "r1": 800, "r2": 0 }
+        { "text": "Score 800 VIP Points", "progress": 0, "target": 800, "r1": 1000, "r2": 0 },
+        { "text": "Score 1,800 VIP Points", "progress": 0, "target": 1800, "r1": 2000, "r2": 0 },
+        { "text": "Score 3,200 VIP Points", "progress": 0, "target": 3200, "r1": 3000, "r2": 0 },
+        { "text": "Score 7,000 VIP Points", "progress": 0, "target": 7000, "r1": 7000, "r2": 0 },
+        { "text": "Score 12,000 VIP Points", "progress": 0, "target": 12000, "r1": 10000, "r2": 0 }
+      ]
+    },
+    {
+      "id": "generous_soul_d2",
+      "name": "Generous Soul",
+      "day": 2,
+      "subtitle": "Complete it every day before the end of the event",
+      "daily": true,
+      "r1_name": "Coin",
+      "tiers": [
+        { "text": "Score 100 VIP Points", "progress": 0, "target": 100, "r1": 200, "r2": 0 },
+        { "text": "Score 200 VIP Points", "progress": 0, "target": 200, "r1": 300, "r2": 0 },
+        { "text": "Score 400 VIP Points", "progress": 0, "target": 400, "r1": 500, "r2": 0 },
+        { "text": "Score 800 VIP Points", "progress": 0, "target": 800, "r1": 1000, "r2": 0 },
+        { "text": "Score 1,800 VIP Points", "progress": 0, "target": 1800, "r1": 2000, "r2": 0 },
+        { "text": "Score 3,200 VIP Points", "progress": 0, "target": 3200, "r1": 3000, "r2": 0 },
+        { "text": "Score 7,000 VIP Points", "progress": 0, "target": 7000, "r1": 7000, "r2": 0 },
+        { "text": "Score 12,000 VIP Points", "progress": 0, "target": 12000, "r1": 10000, "r2": 0 }
+      ]
+    },
+    {
+      "id": "generous_soul_d3",
+      "name": "Generous Soul",
+      "day": 3,
+      "subtitle": "Complete it every day before the end of the event",
+      "daily": true,
+      "r1_name": "Coin",
+      "tiers": [
+        { "text": "Score 100 VIP Points", "progress": 0, "target": 100, "r1": 200, "r2": 0 },
+        { "text": "Score 200 VIP Points", "progress": 0, "target": 200, "r1": 300, "r2": 0 },
+        { "text": "Score 400 VIP Points", "progress": 0, "target": 400, "r1": 500, "r2": 0 },
+        { "text": "Score 800 VIP Points", "progress": 0, "target": 800, "r1": 1000, "r2": 0 },
+        { "text": "Score 1,800 VIP Points", "progress": 0, "target": 1800, "r1": 2000, "r2": 0 },
+        { "text": "Score 3,200 VIP Points", "progress": 0, "target": 3200, "r1": 3000, "r2": 0 },
+        { "text": "Score 7,000 VIP Points", "progress": 0, "target": 7000, "r1": 7000, "r2": 0 },
+        { "text": "Score 12,000 VIP Points", "progress": 0, "target": 12000, "r1": 10000, "r2": 0 }
       ]
     },
     {
@@ -38,11 +103,14 @@
       "name": "Energy of evolution",
       "subtitle": "You can complete these quests during a special event",
       "daily": false,
+      "r1_name": "Coin",
       "tiers": [
-        { "text": "Spend 3,400 Energy", "progress": 3279, "target": 3400, "r1": 650, "r2": 0 },
-        { "text": "Spend 4,200 Energy", "progress": 3279, "target": 4200, "r1": 750, "r2": 0 },
-        { "text": "Spend 5,000 Energy", "progress": 3279, "target": 5000, "r1": 1000, "r2": 0 },
-        { "text": "Spend 6,000 Energy", "progress": 3279, "target": 6000, "r1": 1300, "r2": 0 }
+        { "text": "Spend 2,000 Energy", "progress": 0, "target": 2000, "r1": 500, "r2": 0 },
+        { "text": "Spend 2,700 Energy", "progress": 0, "target": 2700, "r1": 550, "r2": 0 },
+        { "text": "Spend 3,400 Energy", "progress": 0, "target": 3400, "r1": 650, "r2": 0 },
+        { "text": "Spend 4,200 Energy", "progress": 0, "target": 4200, "r1": 750, "r2": 0 },
+        { "text": "Spend 5,000 Energy", "progress": 0, "target": 5000, "r1": 1000, "r2": 0 },
+        { "text": "Spend 6,000 Energy", "progress": 0, "target": 6000, "r1": 1500, "r2": 0 }
       ]
     },
     {
@@ -50,11 +118,18 @@
       "name": "Titanic Contribution",
       "subtitle": "You can complete these quests during a special event",
       "daily": false,
+      "r1_name": "Coin",
+      "r2_name": "Weapon Fragment",
       "tiers": [
-        { "text": "Collect 350 Titanite in the Guild Dungeon", "progress": 306, "target": 350, "r1": 400, "r2": 50 },
-        { "text": "Collect 450 Titanite in the Guild Dungeon", "progress": 306, "target": 450, "r1": 500, "r2": 50 },
-        { "text": "Collect 550 Titanite in the Guild Dungeon", "progress": 306, "target": 550, "r1": 650, "r2": 50 },
-        { "text": "Collect 650 Titanite in the Guild Dungeon", "progress": 306, "target": 650, "r1": 850, "r2": 50 }
+        { "text": "Collect 65 Titanite in the Guild Dungeon", "progress": 0, "target": 65, "r1": 50, "r2": 10 },
+        { "text": "Collect 130 Titanite in the Guild Dungeon", "progress": 0, "target": 130, "r1": 100, "r2": 20 },
+        { "text": "Collect 190 Titanite in the Guild Dungeon", "progress": 0, "target": 190, "r1": 200, "r2": 25 },
+        { "text": "Collect 250 Titanite in the Guild Dungeon", "progress": 0, "target": 250, "r1": 300, "r2": 25 },
+        { "text": "Collect 350 Titanite in the Guild Dungeon", "progress": 0, "target": 350, "r1": 400, "r2": 50 },
+        { "text": "Collect 450 Titanite in the Guild Dungeon", "progress": 0, "target": 450, "r1": 500, "r2": 50 },
+        { "text": "Collect 550 Titanite in the Guild Dungeon", "progress": 0, "target": 550, "r1": 650, "r2": 50 },
+        { "text": "Collect 650 Titanite in the Guild Dungeon", "progress": 0, "target": 650, "r1": 800, "r2": 75 },
+        { "text": "Collect 800 Titanite in the Guild Dungeon", "progress": 0, "target": 800, "r1": 1000, "r2": 100 }
       ]
     },
     {
@@ -62,11 +137,25 @@
       "name": "Power Unleashed",
       "subtitle": "You can complete these quests during a special event",
       "daily": false,
+      "r1_name": "Coin",
+      "r2_name": "Crown Fragment",
       "tiers": [
-        { "text": "Complete 50 summons in the Summoning Circle!", "progress": 30, "target": 50, "r1": 1500, "r2": 50 },
-        { "text": "Complete 80 summons in the Summoning Circle!", "progress": 30, "target": 80, "r1": 1500, "r2": 70 },
-        { "text": "Complete 130 summons in the Summoning Circle!", "progress": 30, "target": 130, "r1": 2000, "r2": 100 },
-        { "text": "Complete 200 summons in the Summoning Circle!", "progress": 30, "target": 200, "r1": 2500, "r2": 150 }
+        { "text": "Complete 1 summon in the Summoning Circle!", "progress": 0, "target": 1, "r1": 50, "r2": 10 },
+        { "text": "Complete 3 summons in the Summoning Circle!", "progress": 0, "target": 3, "r1": 100, "r2": 15 },
+        { "text": "Complete 5 summons in the Summoning Circle!", "progress": 0, "target": 5, "r1": 100, "r2": 20 },
+        { "text": "Complete 7 summons in the Summoning Circle!", "progress": 0, "target": 7, "r1": 100, "r2": 20 },
+        { "text": "Complete 10 summons in the Summoning Circle!", "progress": 0, "target": 10, "r1": 150, "r2": 30 },
+        { "text": "Complete 20 summons in the Summoning Circle!", "progress": 0, "target": 20, "r1": 500, "r2": 40 },
+        { "text": "Complete 50 summons in the Summoning Circle!", "progress": 0, "target": 50, "r1": 1500, "r2": 50 },
+        { "text": "Complete 80 summons in the Summoning Circle!", "progress": 0, "target": 80, "r1": 1500, "r2": 70 },
+        { "text": "Complete 130 summons in the Summoning Circle!", "progress": 0, "target": 130, "r1": 2000, "r2": 100 },
+        { "text": "Complete 200 summons in the Summoning Circle!", "progress": 0, "target": 200, "r1": 2000, "r2": 150 },
+        { "text": "Complete 300 summons in the Summoning Circle!", "progress": 0, "target": 300, "r1": 3000, "r2": 200 },
+        { "text": "Complete 400 summons in the Summoning Circle!", "progress": 0, "target": 400, "r1": 3000, "r2": 250 },
+        { "text": "Complete 500 summons in the Summoning Circle!", "progress": 0, "target": 500, "r1": 3500, "r2": 300 },
+        { "text": "Complete 600 summons in the Summoning Circle!", "progress": 0, "target": 600, "r1": 3500, "r2": 350 },
+        { "text": "Complete 700 summons in the Summoning Circle!", "progress": 0, "target": 700, "r1": 4000, "r2": 400 },
+        { "text": "Complete 800 summons in the Summoning Circle!", "progress": 0, "target": 800, "r1": 5000, "r2": 500 }
       ]
     },
     {
@@ -74,23 +163,80 @@
       "name": "Awakening",
       "subtitle": "You can complete these quests during a special event",
       "daily": false,
+      "r1_name": "Coin",
+      "r2_name": "Weapon Fragment",
       "tiers": [
-        { "text": "Open an Elemental Sphere 50 times", "progress": 25, "target": 50, "r1": 700, "r2": 50 },
-        { "text": "Open an Elemental Sphere 100 times", "progress": 25, "target": 100, "r1": 1500, "r2": 70 },
-        { "text": "Open an Elemental Sphere 200 times", "progress": 25, "target": 200, "r1": 2500, "r2": 100 },
-        { "text": "Open an Elemental Sphere 300 times", "progress": 25, "target": 300, "r1": 3500, "r2": 150 }
+        { "text": "Open an Elemental Sphere 1 time", "progress": 0, "target": 1, "r1": 50, "r2": 10 },
+        { "text": "Open an Elemental Sphere 3 times", "progress": 0, "target": 3, "r1": 50, "r2": 15 },
+        { "text": "Open an Elemental Sphere 5 times", "progress": 0, "target": 5, "r1": 50, "r2": 20 },
+        { "text": "Open an Elemental Sphere 7 times", "progress": 0, "target": 7, "r1": 50, "r2": 25 },
+        { "text": "Open an Elemental Sphere 10 times", "progress": 0, "target": 10, "r1": 100, "r2": 30 },
+        { "text": "Open an Elemental Sphere 15 times", "progress": 0, "target": 15, "r1": 150, "r2": 35 },
+        { "text": "Open an Elemental Sphere 25 times", "progress": 0, "target": 25, "r1": 300, "r2": 40 },
+        { "text": "Open an Elemental Sphere 50 times", "progress": 0, "target": 50, "r1": 700, "r2": 50 },
+        { "text": "Open an Elemental Sphere 100 times", "progress": 0, "target": 100, "r1": 1500, "r2": 70 },
+        { "text": "Open an Elemental Sphere 200 times", "progress": 0, "target": 200, "r1": 2500, "r2": 100 },
+        { "text": "Open an Elemental Sphere 300 times", "progress": 0, "target": 300, "r1": 2500, "r2": 130 },
+        { "text": "Open an Elemental Sphere 400 times", "progress": 0, "target": 400, "r1": 2500, "r2": 160 },
+        { "text": "Open an Elemental Sphere 600 times", "progress": 0, "target": 600, "r1": 4000, "r2": 250 },
+        { "text": "Open an Elemental Sphere 800 times", "progress": 0, "target": 800, "r1": 4000, "r2": 250 },
+        { "text": "Open an Elemental Sphere 1,000 times", "progress": 0, "target": 1000, "r1": 4000, "r2": 300 },
+        { "text": "Open an Elemental Sphere 1,200 times", "progress": 0, "target": 1200, "r1": 4000, "r2": 400 },
+        { "text": "Open an Elemental Sphere 1,500 times", "progress": 0, "target": 1500, "r1": 6000, "r2": 800 }
       ]
     },
     {
-      "id": "secrets_of_outland",
+      "id": "secrets_of_outland_d1",
       "name": "Secrets of Outland",
+      "day": 1,
       "subtitle": "Complete it every day before the end of the event",
       "daily": true,
+      "r1_name": "Coin",
       "tiers": [
-        { "text": "Open 10 chests in Outlands", "progress": 5, "target": 10, "r1": 400, "r2": 0 },
-        { "text": "Open 20 chests in Outlands", "progress": 5, "target": 20, "r1": 500, "r2": 0 },
-        { "text": "Open 30 chests in Outlands", "progress": 5, "target": 30, "r1": 600, "r2": 0 },
-        { "text": "Open 45 chests in Outlands", "progress": 5, "target": 45, "r1": 800, "r2": 0 }
+        { "text": "Open 1 chest in Outlands", "progress": 0, "target": 1, "r1": 100, "r2": 0 },
+        { "text": "Open 3 chests in Outlands", "progress": 0, "target": 3, "r1": 200, "r2": 0 },
+        { "text": "Open 5 chests in Outlands", "progress": 0, "target": 5, "r1": 300, "r2": 0 },
+        { "text": "Open 10 chests in Outlands", "progress": 0, "target": 10, "r1": 400, "r2": 0 },
+        { "text": "Open 20 chests in Outlands", "progress": 0, "target": 20, "r1": 500, "r2": 0 },
+        { "text": "Open 30 chests in Outlands", "progress": 0, "target": 30, "r1": 600, "r2": 0 },
+        { "text": "Open 45 chests in Outlands", "progress": 0, "target": 45, "r1": 800, "r2": 0 },
+        { "text": "Open 60 chests in Outlands", "progress": 0, "target": 60, "r1": 1000, "r2": 0 }
+      ]
+    },
+    {
+      "id": "secrets_of_outland_d2",
+      "name": "Secrets of Outland",
+      "day": 2,
+      "subtitle": "Complete it every day before the end of the event",
+      "daily": true,
+      "r1_name": "Coin",
+      "tiers": [
+        { "text": "Open 1 chest in Outlands", "progress": 0, "target": 1, "r1": 100, "r2": 0 },
+        { "text": "Open 3 chests in Outlands", "progress": 0, "target": 3, "r1": 200, "r2": 0 },
+        { "text": "Open 5 chests in Outlands", "progress": 0, "target": 5, "r1": 300, "r2": 0 },
+        { "text": "Open 10 chests in Outlands", "progress": 0, "target": 10, "r1": 400, "r2": 0 },
+        { "text": "Open 20 chests in Outlands", "progress": 0, "target": 20, "r1": 500, "r2": 0 },
+        { "text": "Open 30 chests in Outlands", "progress": 0, "target": 30, "r1": 600, "r2": 0 },
+        { "text": "Open 45 chests in Outlands", "progress": 0, "target": 45, "r1": 800, "r2": 0 },
+        { "text": "Open 60 chests in Outlands", "progress": 0, "target": 60, "r1": 1000, "r2": 0 }
+      ]
+    },
+    {
+      "id": "secrets_of_outland_d3",
+      "name": "Secrets of Outland",
+      "day": 3,
+      "subtitle": "Complete it every day before the end of the event",
+      "daily": true,
+      "r1_name": "Coin",
+      "tiers": [
+        { "text": "Open 1 chest in Outlands", "progress": 0, "target": 1, "r1": 100, "r2": 0 },
+        { "text": "Open 3 chests in Outlands", "progress": 0, "target": 3, "r1": 200, "r2": 0 },
+        { "text": "Open 5 chests in Outlands", "progress": 0, "target": 5, "r1": 300, "r2": 0 },
+        { "text": "Open 10 chests in Outlands", "progress": 0, "target": 10, "r1": 400, "r2": 0 },
+        { "text": "Open 20 chests in Outlands", "progress": 0, "target": 20, "r1": 500, "r2": 0 },
+        { "text": "Open 30 chests in Outlands", "progress": 0, "target": 30, "r1": 600, "r2": 0 },
+        { "text": "Open 45 chests in Outlands", "progress": 0, "target": 45, "r1": 800, "r2": 0 },
+        { "text": "Open 60 chests in Outlands", "progress": 0, "target": 60, "r1": 1000, "r2": 0 }
       ]
     }
   ]

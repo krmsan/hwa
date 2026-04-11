@@ -1,0 +1,97 @@
+{
+  "events": [
+    {
+      "id": "day_after_day",
+      "name": "Day After Day",
+      "subtitle": "You can complete these quests during a special event",
+      "daily": false,
+      "tiers": [
+        { "text": "Log in 3 times during a special event", "progress": 2, "target": 3, "r1": 600, "r2": 60 }
+      ]
+    },
+    {
+      "id": "value_exchange",
+      "name": "Value Exchange",
+      "subtitle": "You can complete these quests during a special event",
+      "daily": false,
+      "tiers": [
+        { "text": "Spend 4,000 Emeralds", "progress": 3965, "target": 4000, "r1": 300, "r2": 0 },
+        { "text": "Spend 7,000 Emeralds", "progress": 3965, "target": 7000, "r1": 350, "r2": 0 },
+        { "text": "Spend 10,000 Emeralds", "progress": 3965, "target": 10000, "r1": 450, "r2": 0 },
+        { "text": "Spend 15,000 Emeralds", "progress": 3965, "target": 15000, "r1": 600, "r2": 0 }
+      ]
+    },
+    {
+      "id": "generous_soul",
+      "name": "Generous Soul",
+      "subtitle": "Complete it every day before the end of the event",
+      "daily": true,
+      "tiers": [
+        { "text": "Score 100 VIP Points", "progress": 0, "target": 100, "r1": 200, "r2": 0 },
+        { "text": "Score 200 VIP Points", "progress": 0, "target": 200, "r1": 300, "r2": 0 },
+        { "text": "Score 400 VIP Points", "progress": 0, "target": 400, "r1": 500, "r2": 0 },
+        { "text": "Score 800 VIP Points", "progress": 0, "target": 800, "r1": 800, "r2": 0 }
+      ]
+    },
+    {
+      "id": "energy_of_evolution",
+      "name": "Energy of evolution",
+      "subtitle": "You can complete these quests during a special event",
+      "daily": false,
+      "tiers": [
+        { "text": "Spend 3,400 Energy", "progress": 3279, "target": 3400, "r1": 650, "r2": 0 },
+        { "text": "Spend 4,200 Energy", "progress": 3279, "target": 4200, "r1": 750, "r2": 0 },
+        { "text": "Spend 5,000 Energy", "progress": 3279, "target": 5000, "r1": 1000, "r2": 0 },
+        { "text": "Spend 6,000 Energy", "progress": 3279, "target": 6000, "r1": 1300, "r2": 0 }
+      ]
+    },
+    {
+      "id": "titanic_contribution",
+      "name": "Titanic Contribution",
+      "subtitle": "You can complete these quests during a special event",
+      "daily": false,
+      "tiers": [
+        { "text": "Collect 350 Titanite in the Guild Dungeon", "progress": 306, "target": 350, "r1": 400, "r2": 50 },
+        { "text": "Collect 450 Titanite in the Guild Dungeon", "progress": 306, "target": 450, "r1": 500, "r2": 50 },
+        { "text": "Collect 550 Titanite in the Guild Dungeon", "progress": 306, "target": 550, "r1": 650, "r2": 50 },
+        { "text": "Collect 650 Titanite in the Guild Dungeon", "progress": 306, "target": 650, "r1": 850, "r2": 50 }
+      ]
+    },
+    {
+      "id": "power_unleashed",
+      "name": "Power Unleashed",
+      "subtitle": "You can complete these quests during a special event",
+      "daily": false,
+      "tiers": [
+        { "text": "Complete 50 summons in the Summoning Circle!", "progress": 30, "target": 50, "r1": 1500, "r2": 50 },
+        { "text": "Complete 80 summons in the Summoning Circle!", "progress": 30, "target": 80, "r1": 1500, "r2": 70 },
+        { "text": "Complete 130 summons in the Summoning Circle!", "progress": 30, "target": 130, "r1": 2000, "r2": 100 },
+        { "text": "Complete 200 summons in the Summoning Circle!", "progress": 30, "target": 200, "r1": 2500, "r2": 150 }
+      ]
+    },
+    {
+      "id": "awakening",
+      "name": "Awakening",
+      "subtitle": "You can complete these quests during a special event",
+      "daily": false,
+      "tiers": [
+        { "text": "Open an Elemental Sphere 50 times", "progress": 25, "target": 50, "r1": 700, "r2": 50 },
+        { "text": "Open an Elemental Sphere 100 times", "progress": 25, "target": 100, "r1": 1500, "r2": 70 },
+        { "text": "Open an Elemental Sphere 200 times", "progress": 25, "target": 200, "r1": 2500, "r2": 100 },
+        { "text": "Open an Elemental Sphere 300 times", "progress": 25, "target": 300, "r1": 3500, "r2": 150 }
+      ]
+    },
+    {
+      "id": "secrets_of_outland",
+      "name": "Secrets of Outland",
+      "subtitle": "Complete it every day before the end of the event",
+      "daily": true,
+      "tiers": [
+        { "text": "Open 10 chests in Outlands", "progress": 5, "target": 10, "r1": 400, "r2": 0 },
+        { "text": "Open 20 chests in Outlands", "progress": 5, "target": 20, "r1": 500, "r2": 0 },
+        { "text": "Open 30 chests in Outlands", "progress": 5, "target": 30, "r1": 600, "r2": 0 },
+        { "text": "Open 45 chests in Outlands", "progress": 5, "target": 45, "r1": 800, "r2": 0 }
+      ]
+    }
+  ]
+}

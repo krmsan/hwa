@@ -149,35 +149,28 @@ body{
     display:flex;gap:6px;align-items:center;flex-shrink:0;
 }
 .reward-icon{
-    min-width:52px;height:52px;
+    min-width:52px;height:46px;
     border-radius:7px;
     display:flex;flex-direction:column;
-    align-items:center;justify-content:flex-end;
-    gap:0;
+    align-items:center;justify-content:center;
+    gap:1px;
     position:relative;
     border:1.5px solid rgba(255,255,255,0.15);
-    padding:2px 6px 4px;
-    background-size:32px 32px;
-    background-repeat:no-repeat;
-    background-position:center 3px;
+    padding:3px 6px;
 }
 .reward-icon.type-coin{
-    background-image:url('coin_img.png');
-    background-color:rgba(20,15,10,0.6);
-    box-shadow:0 2px 8px rgba(80,50,10,0.5);
+    background:linear-gradient(145deg,#2a5590,#1a3560);
+    box-shadow:0 2px 8px rgba(20,50,100,0.5);
 }
 .reward-icon.type-crown{
-    background-image:url('crown_img.png');
-    background-color:rgba(25,10,15,0.6);
-    box-shadow:0 2px 8px rgba(100,20,40,0.5);
+    background:linear-gradient(145deg,#8a3530,#5a2025);
+    box-shadow:0 2px 8px rgba(100,30,30,0.5);
 }
 .reward-icon.type-weapon{
-    background-image:url('weapon_img.png');
-    background-color:rgba(20,12,10,0.6);
+    background:linear-gradient(145deg,#7a4a20,#4a2a10);
     box-shadow:0 2px 8px rgba(80,30,10,0.5);
 }
 .reward-name{
-    display:none;
     font-size:8px;font-weight:600;
     color:#c0d8f0;
     white-space:nowrap;
@@ -253,7 +246,7 @@ body{
     font-size:10px;color:#6a7a8e;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;
     display:flex;align-items:center;justify-content:center;gap:4px;
 }
-.totals-label img{width:16px;height:16px;border-radius:3px}
+.totals-label img{width:22px;height:22px;border-radius:4px}
 .totals-val{font-size:20px;font-weight:800}
 .totals-val.gold{color:#ffd780}
 .totals-val.purp{color:#c898ff}
@@ -283,7 +276,7 @@ body{
     .tab{padding:5px 8px;font-size:10.5px}
     .quest-row{padding:10px;gap:8px}
     .quest-text{font-size:12.5px}
-    .reward-icon{min-width:44px;height:44px;padding:2px 4px;background-size:26px 26px}
+    .reward-icon{min-width:44px;height:40px;padding:2px 4px}
     .reward-amt{font-size:11px}
     .quest-btn{padding:6px 10px;font-size:11px}
 }
@@ -423,13 +416,13 @@ function render() {
 
         const r1Icon = document.createElement('div');
         r1Icon.className = 'reward-icon ' + (typeClass[ev.r1_name] || 'type-coin');
-        r1Icon.innerHTML = `<span class="reward-amt">${tier.r1.toLocaleString('en-US')}</span>`;
+        r1Icon.innerHTML = `<span class="reward-name">${ev.r1_name || 'Coin'}</span><span class="reward-amt">${tier.r1.toLocaleString('en-US')}</span>`;
         rewards.appendChild(r1Icon);
 
         if (tier.r2 > 0 && ev.r2_name) {
             const r2Icon = document.createElement('div');
             r2Icon.className = 'reward-icon ' + (typeClass[ev.r2_name] || 'type-coin');
-            r2Icon.innerHTML = `<span class="reward-amt">${tier.r2}</span>`;
+            r2Icon.innerHTML = `<span class="reward-name">${ev.r2_name}</span><span class="reward-amt">${tier.r2}</span>`;
             rewards.appendChild(r2Icon);
         }
 

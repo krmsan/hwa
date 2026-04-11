@@ -23,7 +23,7 @@ body{
         radial-gradient(ellipse at 85% 75%, rgba(60,30,20,0.25) 0%, transparent 40%),
         #060a14;
 }
-.app{position:relative;z-index:1;max-width:700px;margin:0 auto;padding:0 6px 120px}
+.app{position:relative;z-index:1;max-width:700px;margin:0 auto;padding:0 6px 130px}
 
 /* Header */
 .header{
@@ -277,13 +277,45 @@ body{
 .panel{display:none}
 .panel.active{display:block}
 
-@media(max-width:420px){
-    .tab{padding:5px 8px;font-size:10.5px}
-    .quest-row{padding:10px;gap:8px}
-    .quest-text{font-size:12.5px}
-    .reward-icon{min-width:44px;height:40px;padding:2px 4px}
-    .reward-amt{font-size:11px}
-    .quest-btn{padding:6px 10px;font-size:11px}
+@media(max-width:480px){
+    .header{padding:10px 12px 6px}
+    .header h1{font-size:18px}
+    .event-meta .event-title{font-size:10px}
+    .tabs{gap:4px;padding:4px 8px 8px}
+    .tab{padding:5px 8px;font-size:10px}
+    .sub-tabs{gap:4px;padding:2px 8px 6px}
+    .subtitle{font-size:11px;padding:4px 12px 10px}
+    .quest-list{padding:0 6px}
+    .quest-row{padding:10px;gap:6px}
+    .quest-text{font-size:12px}
+    .reward-icon{min-width:40px;height:38px;padding:2px 4px}
+    .reward-name{font-size:7px}
+    .reward-amt{font-size:10px}
+    .quest-btn{padding:6px 10px;font-size:10px}
+    .tab-total{padding:10px 12px;gap:10px;margin:4px 6px 0}
+    .tab-total-label{font-size:11px}
+    .tab-total-val{font-size:14px}
+    .totals-bar{padding:8px 10px}
+    .totals-inner{gap:6px}
+    .totals-icon{width:28px;height:28px;border-radius:5px}
+    .totals-label{font-size:8px;letter-spacing:0.3px}
+    .totals-val{font-size:14px}
+    .selected-label{font-size:8px}
+    .selected-val{font-size:14px}
+    .totals-divider{height:32px}
+}
+@media(max-width:360px){
+    .tabs{gap:3px;padding:3px 6px 6px}
+    .tab{padding:4px 6px;font-size:9px}
+    .quest-row{padding:8px;gap:5px}
+    .quest-text{font-size:11px}
+    .reward-icon{min-width:36px;height:34px}
+    .reward-name{font-size:6.5px}
+    .reward-amt{font-size:9px}
+    .quest-btn{padding:5px 8px;font-size:9px}
+    .totals-icon{width:24px;height:24px}
+    .totals-val{font-size:12px}
+    .totals-label{font-size:7px}
 }
 </style>
 </head>

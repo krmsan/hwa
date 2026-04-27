@@ -44,6 +44,37 @@ body{
 .event-meta .event-date{
     font-size:10px;color:#6a7a8e;
 }
+/* Top-level page tabs */
+.page-tabs{
+    position:relative;z-index:2;
+    display:flex;gap:8px;
+    padding:10px 12px 4px;justify-content:center;
+    border-bottom:1px solid rgba(60,90,130,0.2);
+    margin-bottom:6px;
+}
+.page-tab{
+    padding:8px 18px;
+    font-size:13px;font-weight:700;
+    color:#8ea4be;
+    background:rgba(15,25,50,0.7);
+    border:1.5px solid rgba(60,90,130,0.35);
+    border-radius:6px 6px 0 0;
+    cursor:pointer;
+    transition:all 0.2s;
+    user-select:none;
+    letter-spacing:0.3px;
+}
+.page-tab:hover{border-color:rgba(80,140,220,0.5);color:#b0c8e8}
+.page-tab.active{
+    color:#ffd780;
+    background:rgba(40,30,15,0.85);
+    border-color:rgba(200,160,60,0.6);
+    box-shadow:0 -2px 12px rgba(200,160,60,0.18), inset 0 0 14px rgba(200,160,60,0.08);
+}
+
+/* Page containers */
+.page{display:none;position:relative;z-index:1}
+.page.active{display:block}
 
 /* Tabs */
 .tabs{
@@ -277,6 +308,155 @@ body{
 .panel{display:none}
 .panel.active{display:block}
 
+/* Guild Versus calendar */
+#pageGuild .app-wide{
+    position:relative;z-index:1;
+    max-width:1700px;margin:0 auto;
+    padding:0 6px 8px;
+}
+#pageGuild .header{padding:6px 10px 4px}
+#pageGuild .header h1{font-size:16px}
+.calendar-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:6px;
+    padding:0 4px;
+}
+@media(max-width:1400px){.calendar-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){.calendar-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.calendar-grid{grid-template-columns:1fr}}
+.day-card{
+    background:linear-gradient(160deg,#f5ead2 0%,#ead8b0 100%);
+    border:1.5px solid rgba(140,100,40,0.45);
+    border-radius:8px;
+    padding:6px 5px;
+    display:flex;flex-direction:column;
+    box-shadow:0 2px 10px rgba(0,0,0,0.35);
+}
+.day-card-header{
+    display:flex;flex-direction:column;gap:2px;
+    padding:2px 4px 4px;
+    border-bottom:1px solid rgba(140,100,40,0.3);
+    margin-bottom:4px;
+}
+.day-card-title-row{
+    display:flex;align-items:center;gap:4px;
+}
+.day-card-actions{display:flex;gap:3px;margin-left:auto}
+.day-mini-btn{
+    font-size:9px;font-weight:700;
+    padding:2px 5px;border-radius:3px;
+    background:rgba(255,255,255,0.5);
+    border:1px solid rgba(140,100,40,0.4);
+    color:#5a4020;cursor:pointer;
+    line-height:1.1;
+    white-space:nowrap;
+}
+.day-mini-btn:hover{background:#fff;border-color:#7a4a14;color:#7a4a14}
+.day-card-title{
+    font-size:13px;font-weight:800;color:#7a4a14;
+    letter-spacing:0.3px;
+    line-height:1.1;
+}
+.day-card-theme{
+    font-size:9px;font-weight:700;
+    color:#5a4020;
+    letter-spacing:0.3px;
+    text-transform:uppercase;
+}
+.day-card-count{
+    font-size:9px;color:#5a4020;font-weight:700;
+    background:rgba(255,255,255,0.45);
+    padding:2px 6px;border-radius:3px;
+    border:1px solid rgba(140,100,40,0.3);
+}
+.day-quest-list{display:flex;flex-direction:column;gap:2px}
+.day-quest-row{
+    display:flex;align-items:center;gap:5px;
+    flex-wrap:wrap;
+    padding:3px 5px;
+    background:rgba(255,255,255,0.35);
+    border-radius:4px;
+    border-left:3px solid transparent;
+    cursor:pointer;
+    transition:all 0.15s;
+    user-select:none;
+}
+.day-quest-row:hover{background:rgba(255,255,255,0.6)}
+@keyframes peer-pulse{
+    0%,100%{box-shadow:0 0 0 1px rgba(255,255,255,0.3); transform:scale(1.008)}
+    50%   {box-shadow:0 0 0 2.5px rgba(255,255,255,1); transform:scale(1.04)}
+}
+.day-quest-row.peer-hover{
+    position:relative;z-index:5;
+    filter:brightness(1.1) saturate(1.2);
+    animation:peer-pulse 1.4s ease-in-out infinite;
+}
+/* Checked: gri + sağda yeşil tik */
+.day-quest-row.checked{
+    filter:grayscale(0.85);
+    opacity:0.78;
+}
+.day-quest-row.checked::after{
+    content:"✓";
+    font-size:13px;font-weight:900;color:#2a9040;
+    margin-left:auto;padding-left:4px;
+    text-shadow:0 0 4px rgba(60,200,80,0.4);
+}
+.day-quest-text{
+    flex:1;min-width:0;
+    font-size:9.5px;font-weight:600;
+    color:#2a1f10;line-height:1.2;
+}
+.day-quest-amount{
+    flex-shrink:0;
+    font-size:9.5px;font-weight:800;
+    color:#ffd780;
+    background:linear-gradient(145deg,#2a5590,#1a3560);
+    padding:2px 5px;border-radius:3px;
+    border:1px solid rgba(255,255,255,0.12);
+    text-shadow:0 1px 2px rgba(0,0,0,0.5);
+    white-space:nowrap;
+    min-width:42px;text-align:center;
+}
+.day-quest-mult-sign{
+    flex-shrink:0;
+    font-size:10px;font-weight:700;
+    color:#7a4a14;
+    margin:0 1px;
+}
+.day-quest-mult-input{
+    flex-shrink:0;
+    width:36px;
+    font-size:10px;font-weight:700;
+    padding:1px 3px;
+    background:rgba(255,255,255,0.85);
+    border:1px solid rgba(140,100,40,0.45);
+    border-radius:3px;
+    color:#2a1f10;
+    text-align:center;
+    outline:none;
+    font-family:inherit;
+}
+.day-quest-mult-input:focus{
+    border-color:#7a4a14;
+    background:#fff;
+    box-shadow:0 0 0 2px rgba(122,74,20,0.2);
+}
+.day-quest-mult-input::-webkit-inner-spin-button,
+.day-quest-mult-input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.day-quest-mult-input[type=number]{-moz-appearance:textfield}
+.day-card-total{
+    margin-top:4px;
+    padding:5px 4px 2px;
+    border-top:1px solid rgba(140,100,40,0.3);
+    display:flex;justify-content:space-between;align-items:center;
+}
+.day-card-total-label{font-size:9px;color:#5a4020;font-weight:700}
+.day-card-total-val{font-size:11px;font-weight:800;color:#7a4a14}
+.totals-bar{display:none}
+.totals-bar.active{display:block}
+
 @media(max-width:480px){
     .header{padding:10px 12px 6px}
     .header h1{font-size:18px}
@@ -321,17 +501,35 @@ body{
 </head>
 <body>
 <div class="bg"></div>
-<div class="app">
-    <div class="header">
-        <h1>Events</h1>
-        <div class="event-meta" id="eventMeta"></div>
-    </div>
-    <div class="tabs" id="tabs"></div>
-    <div class="sub-tabs" id="subtabs"></div>
-    <div class="subtitle" id="subtitle"></div>
-    <div id="panels"></div>
+
+<div class="page-tabs">
+    <div class="page-tab active" data-page="events">Events</div>
+    <div class="page-tab" data-page="guild">Guild Versus</div>
 </div>
-<div class="totals-bar">
+
+<div class="page active" id="pageEvents">
+    <div class="app">
+        <div class="header">
+            <h1>Events</h1>
+            <div class="event-meta" id="eventMeta"></div>
+        </div>
+        <div class="tabs" id="tabs"></div>
+        <div class="sub-tabs" id="subtabs"></div>
+        <div class="subtitle" id="subtitle"></div>
+        <div id="panels"></div>
+    </div>
+</div>
+
+<div class="page" id="pageGuild">
+    <div class="app-wide">
+        <div class="header">
+            <h1>Guild Versus Calender</h1>
+        </div>
+        <div class="calendar-grid" id="guildGrid"></div>
+    </div>
+</div>
+
+<div class="totals-bar active" id="totalsEvents">
     <div class="totals-inner">
         <div class="totals-section selected-section">
             <div class="selected-label">Selected</div>
@@ -363,6 +561,7 @@ body{
         </div>
     </div>
 </div>
+
 
 <script>
 let events = [];
@@ -520,6 +719,306 @@ function render() {
 }
 
 render();
+
+/* =============== Guild Versus (Titan Power Calendar) =============== */
+const guildCalendar = [
+    { day: 1, theme: "Titan Power", quests: [
+        { text: "Increase Titan Power by 3", amount: 100 },
+        { text: "Defeat 1 Lv. 1 or above Monster", amount: 2000 },
+        { text: "Clear Brigand Camp 1 time", amount: 2500 },
+        { text: "Collect 3000 units of Food on the map", amount: 10 },
+        { text: "Collect 3000 units of Wood on the map", amount: 10 },
+        { text: "Collect 600 units of Stone on the map", amount: 10 },
+        { text: "Collect 150 units of Iron on the map", amount: 10 },
+        { text: "Defeat Elite Monster 1 time", amount: 850 },
+        { text: "Open a Summoning Sphere 1 time", amount: 1500 },
+        { text: "Open an Elemental Sphere 1 time", amount: 1200 },
+        { text: "Fight 1 time in the Arena", amount: 6000 },
+        { text: "Open 1 chest in the Tower", amount: 4000 },
+        { text: "Complete 1 Daily Quest", amount: 2000 },
+        { text: "Spend 15 Sparks of Power", amount: 30 },
+        { text: "Open Heroic Chest 1 time", amount: 4000 },
+        { text: "Get 1 VIP Points", amount: 100 }
+    ]},
+    { day: 2, theme: "Hero Skins", quests: [
+        { text: "Increase Power with building by 1", amount: 200 },
+        { text: "Use building speed-up for 1 minute", amount: 300 },
+        { text: "Defeat 1 Lv. 1 or above Monster", amount: 2000 },
+        { text: "Spend 15 Hero Skin Stones", amount: 700 },
+        { text: "Open 1 chest in the Outlands", amount: 2000 },
+        { text: "Fight 1 time in the Arena", amount: 6000 },
+        { text: "Start 1 Expedition", amount: 5000 },
+        { text: "Open 1 chest in the Tower", amount: 4000 },
+        { text: "Complete 1 Daily Quest", amount: 2000 },
+        { text: "Use 100 Titan Potions", amount: 150 },
+        { text: "Get 1 VIP Points", amount: 100 }
+    ]},
+    { day: 3, theme: "Hero Gear", quests: [
+        { text: "Increase Power with research by 1", amount: 30 },
+        { text: "Use research speed-up for 1 minute", amount: 300 },
+        { text: "Clear Brigand Camp 1 time", amount: 2500 },
+        { text: "Equip 1 Red item", amount: 1250000 },
+        { text: "Equip 1 Orange item", amount: 160000 },
+        { text: "Equip 1 Violet item", amount: 27000 },
+        { text: "Equip 1 Blue item", amount: 5000 },
+        { text: "Equip 1 Green item", amount: 1000 },
+        { text: "Equip 1 White item", amount: 400 },
+        { text: "Spend 1 Hero artifact fragment", amount: 1200 },
+        { text: "Complete 1 Daily Quest", amount: 2000 },
+        { text: "Open 1 chest in the Tower", amount: 4000 },
+        { text: "Get 1 Hero Soul Stone", amount: 500 },
+        { text: "Spend 25 Fairy Dust", amount: 50 },
+        { text: "Spend 3 Energy", amount: 100 },
+        { text: "Get 1 VIP Points", amount: 100 }
+    ]},
+    { day: 4, theme: "Hero Training", quests: [
+        { text: "Spend 1 Manuals to upgrade troop commanders' skills", amount: 5000 },
+        { text: "Defeat 1 Lv. 1 or above Monster", amount: 2000 },
+        { text: "Spend 100 Rune Spheres", amount: 50000 },
+        { text: "Spend 20 Rune Stones", amount: 100 },
+        { text: "Increase Hero Power by 1", amount: 30 },
+        { text: "Fight 1 time in the Grand Arena", amount: 6000 },
+        { text: "Fight 1 time in the Arena", amount: 6000 },
+        { text: "Complete 1 Daily Quest", amount: 2000 },
+        { text: "Spend 15 Titan Skin Stones", amount: 100 },
+        { text: "Open Heroic Chest 1 time", amount: 4000 },
+        { text: "Get 1 VIP Points", amount: 100 }
+    ]},
+    { day: 5, theme: "Army Training", quests: [
+        { text: "Increase Power with building by 1", amount: 200 },
+        { text: "Use building speed-up for 1 minute", amount: 300 },
+        { text: "Use training speed-up for 1 minute", amount: 300 },
+        { text: "Recruit 1 of any level 9 troops", amount: 200 },
+        { text: "Recruit 1 of any level 8 troops", amount: 140 },
+        { text: "Recruit 1 of any level 7 troops", amount: 110 },
+        { text: "Recruit 1 of any level 6 troops", amount: 80 },
+        { text: "Recruit 1 of any level 5 troops", amount: 60 },
+        { text: "Recruit 1 of any level 4 troops", amount: 40 },
+        { text: "Recruit 1 of any level 3 troops", amount: 30 },
+        { text: "Recruit 1 of any level 2 troops", amount: 20 },
+        { text: "Recruit 1 of any level 1 troops", amount: 10 },
+        { text: "Clear Brigand Camp 1 time", amount: 2500 },
+        { text: "Spend 15 Hero Skin Stones", amount: 700 },
+        { text: "Open 1 chest in the Outlands", amount: 2000 },
+        { text: "Complete 1 Daily Quest", amount: 2000 },
+        { text: "Start 1 Expedition", amount: 5000 },
+        { text: "Fight 1 time in the Arena", amount: 6000 },
+        { text: "Spend 25 Fairy Dust", amount: 50 },
+        { text: "Get 1 VIP Points", amount: 100 }
+    ]},
+    { day: 6, theme: "Relics Upgrade", quests: [
+        { text: "Spend 10 Relic Shards", amount: 225000 },
+        { text: "Use research speed-up for 1 minute", amount: 300 },
+        { text: "Use building speed-up for 1 minute", amount: 300 },
+        { text: "Use training speed-up for 1 minute", amount: 300 },
+        { text: "Defeat Elite Monster 1 time", amount: 850 },
+        { text: "Clear Brigand Camp 1 time", amount: 2500 },
+        { text: "Open 1 chest in the Tower", amount: 4000 },
+        { text: "Fight 1 time in the Arena", amount: 6000 },
+        { text: "Complete 1 Daily Quest", amount: 2000 },
+        { text: "Use 100 Titan Potions", amount: 150 },
+        { text: "Spend 15 Mastery Crystals", amount: 200 },
+        { text: "Spend 1 Chaos Core", amount: 3000 },
+        { text: "Get 1 VIP Points", amount: 100 }
+    ]}
+];
+
+const GUILD_KEY = 'hwa_titan_calendar_v2';
+guildCalendar.forEach(d => d.quests.forEach(q => { q.checked = false; q.mult = 1; }));
+function loadGuild(){
+    try {
+        const saved = JSON.parse(localStorage.getItem(GUILD_KEY) || '{}');
+        guildCalendar.forEach(d => d.quests.forEach((q,i) => {
+            const v = saved[`d${d.day}_${i}`];
+            if (!v) return;
+            if (typeof v === 'object') {
+                q.checked = !!v.c;
+                q.mult = (typeof v.m === 'number' && v.m >= 0) ? v.m : 1;
+            } else {
+                q.checked = true;
+            }
+        }));
+    } catch(e){}
+}
+function saveGuild(){
+    const out = {};
+    guildCalendar.forEach(d => d.quests.forEach((q,i) => {
+        if (q.checked || (q.mult !== undefined && q.mult !== 1)) {
+            out[`d${d.day}_${i}`] = { c: q.checked ? 1 : 0, m: q.mult };
+        }
+    }));
+    localStorage.setItem(GUILD_KEY, JSON.stringify(out));
+}
+function fmt(n){ return n.toLocaleString('en-US'); }
+
+function normalizeTask(s){
+    return s.toLowerCase()
+        .replace(/\bspeed-up\s+for\s+/g, 'speed-up ')
+        .replace(/\s+/g, ' ').trim();
+}
+
+const TASK_PALETTE = [
+    { bg: '#ffaaa0', border: '#c62828' }, // 1. coral red
+    { bg: '#a0c8f0', border: '#0d47a1' }, // 2. sky blue
+    { bg: '#80d090', border: '#1b5e20' }, // 3. green
+    { bg: '#ffcc80', border: '#bf360c' }, // 4. orange
+    { bg: '#c8a0e0', border: '#4527a0' }, // 5. purple
+    { bg: '#80c8d4', border: '#006064' }, // 6. teal/cyan
+    { bg: '#fde080', border: '#8d6e00' }, // 7. yellow
+    { bg: '#ffa0c0', border: '#ad1457' }, // 8. pink
+    { bg: '#a8a0e8', border: '#1a237e' }, // 9. indigo
+    { bg: '#c0a888', border: '#5d4037' }, // 10. brown
+    { bg: '#e8a880', border: '#8d4e2e' }, // 11. terracotta
+    { bg: '#e088c0', border: '#880e4f' }, // 12. magenta
+    { bg: '#a0b8c4', border: '#37474f' }, // 13. slate
+    { bg: '#c8d870', border: '#689f38' }, // 14. lime (yellow-green)
+    { bg: '#cc8088', border: '#7b1c1c' }, // 15. burgundy
+    { bg: '#8090a0', border: '#263238' }, // 16. charcoal blue
+    { bg: '#dcb4d4', border: '#6a1b9a' }, // 17. lavender
+    { bg: '#b8d8a8', border: '#33691e' }, // 18. olive-green spare
+    { bg: '#d8c098', border: '#6d4c41' }, // 19. tan spare
+    { bg: '#a0d8c0', border: '#00695c' }  // 20. mint spare
+];
+
+const taskColorMap = (() => {
+    const count = {};
+    const firstSeen = {};
+    let order = 0;
+    guildCalendar.forEach(d => d.quests.forEach(q => {
+        const k = normalizeTask(q.text);
+        count[k] = (count[k] || 0) + 1;
+        if (firstSeen[k] === undefined) firstSeen[k] = order++;
+    }));
+    const repeats = Object.keys(count).filter(k => count[k] >= 2);
+    repeats.sort((a, b) => firstSeen[a] - firstSeen[b]);
+    const map = {};
+    repeats.forEach((k, i) => { map[k] = TASK_PALETTE[i % TASK_PALETTE.length]; });
+    return map;
+})();
+
+function taskColor(s){ return taskColorMap[normalizeTask(s)] || null; }
+
+function dayTotals(d){
+    const dayPower = d.quests.filter(q => q.checked).reduce((s,q) => s + q.amount * (q.mult||1), 0);
+    const dayMax = d.quests.reduce((s,q) => s + q.amount * (q.mult||1), 0);
+    const checkedCount = d.quests.filter(q => q.checked).length;
+    return { dayPower, dayMax, checkedCount };
+}
+
+function updateCardTotals(card, d){
+    const { dayPower, dayMax, checkedCount } = dayTotals(d);
+    const valEl = card.querySelector('.day-card-total-val');
+    const cntEl = card.querySelector('.day-card-count');
+    if (valEl) valEl.textContent = `${fmt(dayPower)} / ${fmt(dayMax)}`;
+    if (cntEl) cntEl.textContent = `${checkedCount}/${d.quests.length}`;
+}
+
+function renderGuild(){
+    const grid = document.getElementById('guildGrid');
+    grid.innerHTML = '';
+    guildCalendar.forEach(d => {
+        const card = document.createElement('div');
+        card.className = 'day-card';
+        card.dataset.day = d.day;
+        const { dayPower, dayMax, checkedCount } = dayTotals(d);
+
+        const head = document.createElement('div');
+        head.className = 'day-card-header';
+        head.innerHTML = `<div class="day-card-title-row">`
+            +   `<span class="day-card-title">Day ${d.day}</span>`
+            +   `<span class="day-card-count">${checkedCount}/${d.quests.length}</span>`
+            +   `<div class="day-card-actions">`
+            +     `<button class="day-mini-btn" data-act="all">All</button>`
+            +     `<button class="day-mini-btn" data-act="clear">Clear</button>`
+            +     `<button class="day-mini-btn" data-act="reset" title="Çarpanları 1'e sıfırla">Reset</button>`
+            +   `</div>`
+            + `</div>`
+            + `<div class="day-card-theme">${d.theme || ''}</div>`;
+        head.querySelector('[data-act="all"]').addEventListener('click', () => {
+            d.quests.forEach(q => q.checked = true);
+            saveGuild(); renderGuild();
+        });
+        head.querySelector('[data-act="clear"]').addEventListener('click', () => {
+            d.quests.forEach(q => q.checked = false);
+            saveGuild(); renderGuild();
+        });
+        head.querySelector('[data-act="reset"]').addEventListener('click', () => {
+            d.quests.forEach(q => q.mult = 1);
+            saveGuild(); renderGuild();
+        });
+        card.appendChild(head);
+
+        const list = document.createElement('div');
+        list.className = 'day-quest-list';
+        d.quests.forEach(q => {
+            const row = document.createElement('div');
+            row.className = 'day-quest-row' + (q.checked ? ' checked' : '');
+            const c = taskColor(q.text);
+            const k = normalizeTask(q.text);
+            if (c) {
+                row.dataset.taskKey = k;
+                row.style.background = c.bg;
+                row.style.borderLeftColor = c.border;
+            }
+            row.innerHTML = `<div class="day-quest-text">${q.text}</div>`
+                + `<div class="day-quest-amount">${fmt(q.amount)}</div>`
+                + `<span class="day-quest-mult-sign">×</span>`
+                + `<input class="day-quest-mult-input" type="number" min="0" step="1" value="${q.mult ?? 1}">`;
+            row.addEventListener('click', e => {
+                if (e.target.classList.contains('day-quest-mult-input')) return;
+                q.checked = !q.checked;
+                row.classList.toggle('checked', q.checked);
+                saveGuild();
+                updateCardTotals(card, d);
+            });
+            const inp = row.querySelector('.day-quest-mult-input');
+            const fit = () => { inp.style.width = Math.max(36, (inp.value||'').length * 7 + 14) + 'px'; };
+            fit();
+            inp.addEventListener('click', e => e.stopPropagation());
+            inp.addEventListener('input', e => {
+                const v = parseFloat(e.target.value);
+                q.mult = (isNaN(v) || v < 0) ? 0 : v;
+                fit();
+                saveGuild();
+                updateCardTotals(card, d);
+            });
+            row.addEventListener('mouseenter', () => {
+                const tk = row.dataset.taskKey;
+                if (!tk) return;
+                document.querySelectorAll(`.day-quest-row[data-task-key="${CSS.escape(tk)}"]`)
+                    .forEach(r => r.classList.add('peer-hover'));
+            });
+            row.addEventListener('mouseleave', () => {
+                document.querySelectorAll('.day-quest-row.peer-hover')
+                    .forEach(r => r.classList.remove('peer-hover'));
+            });
+            list.appendChild(row);
+        });
+        card.appendChild(list);
+
+        const tot = document.createElement('div');
+        tot.className = 'day-card-total';
+        tot.innerHTML = `<span class="day-card-total-label">Day Total</span><span class="day-card-total-val">${fmt(dayPower)} / ${fmt(dayMax)}</span>`;
+        card.appendChild(tot);
+
+        grid.appendChild(card);
+    });
+}
+
+
+loadGuild();
+renderGuild();
+
+/* =============== Page switching =============== */
+document.querySelectorAll('.page-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = tab.dataset.page;
+        document.querySelectorAll('.page-tab').forEach(t => t.classList.toggle('active', t === tab));
+        document.getElementById('pageEvents').classList.toggle('active', target === 'events');
+        document.getElementById('pageGuild').classList.toggle('active', target === 'guild');
+        document.getElementById('totalsEvents').classList.toggle('active', target === 'events');
+    });
+});
 </script>
 </body>
 </html>
